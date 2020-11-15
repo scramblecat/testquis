@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <mate charset="utf-8">
+            <title>四択クイズ（ベータ版）</title>
+            <link href="https://fonts.googleapis.com/css?family=Londrina+Shadow" rel="stylesheet">
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+            <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+        <section>
+            <div class="quiz">
+                <h1><img src="../img/title.jpg" alt="ロゴ"></h1>
+                <h2 id="title"></h2>
+            </div>
+            <div class="img">
+                <div class="img-content">
+                    <img id="img">
+                </div>
+                <p id="question"></p>
+                <div id="ans-btn">
+                    <button id="ans-btn1" onclick="onAnswer(1)"></button>
+                    <button id="ans-btn2" onclick="onAnswer(2)"></button>
+                    <button id="ans-btn3" onclick="onAnswer(3)"></button>
+                    <button id="ans-btn4" onclick="onAnswer(4)"></button>
+                </div>
+            </div>
+        </section>
+        <section class="screen-transition" id="screen-transition">
+            <div>
+                <button id="home-btn" onclick="onTop()">ホームに戻る。</button>
+                <button id="next-btn" onclick="onPagek2()">次の問題へ</button>
+            </div>
+        </section>
+        <audio id="correct-sound" preload="auto">
+            <source src="../sounds/correct.mp3" type="audio/mp3">
+        </audio>
+        <audio id="incorrect-sound" preload="auto">
+            <source src="../sounds/incorrect.mp3" type="audio/mp3">
+        </audio>
+        <script src="../js/main.js"></script>
+    </body>
+</html>
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UYF-8" />
+        <title>One Minute Timer</title>
+        <script type="text/javascript">
+            var timer_ID;
+            var time = 60;
+
+            function minusTime() {
+                time--;
+                dispTime();	
+                if (time==0) {
+                    clearInterval(timer_ID);
+                }
+            }
+			
+            function dispTime() {
+                document.getElementsByTagName("output")[0].innerHTML = time;
+            }
+
+            window.onload = function() {
+                dispTime();
+                timer_ID = setInterval("minusTime()", 1000);
+            }
+        </script>
+    </head>
+    <body>
+        <output></output>
+    </body>
+</html>
