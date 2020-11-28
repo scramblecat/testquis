@@ -16,24 +16,24 @@ let answerText;
 
 const questions = [
     {
-        question: 'この猫の柄は、なんていう柄でしょうか。カタカナで記述してください。',
-        image: '../img/cat1.JPG',
-        correct: 'キジトラ',
-        explanation: '',
+        question: 'これは何でしょう。',
+        image: '../img/computer_cpu.png',
+        correct: 'CPU',
+        explanation: '簡単に言えば、パソコンの計算するところ。',
         ansCorrect() { return this.correct }
     },
     {
-        question: '二代目将軍の名前はなんでしょう？漢字で記述してください。',
-        image: 'img/',
-        correct: '徳川秀忠',
-        explanation: '初代将軍・家康の三男です。大河ドラマにもなった浅井三姉妹「江」の夫としても有名です。',
+        question: 'これは何でしょう。',
+        image: '../img/computer_motherboard.png',
+        correct: 'マザーボード',
+        explanation: '簡単に言えば、パソコンに入ってるでっかい板。',
         ansCorrect() { return this.correct }
     },
     {
-        question: '三代目将軍の名前はなんでしょう？漢字で記述してください。',
-        image: 'img/',
-        correct: '徳川家光',
-        explanation: 'ちなみに15人の徳川将軍のうち、正室の子は家康・家光・慶喜の3人のみであり、なかでも将軍の御内室（御台所）が生んだ将軍は家光のみだそうです。',
+        question: 'これは何でしょう。',
+        image: '../img/computer_ssd_m2_NVMe.png',
+        correct: 'SSD',
+        explanation: 'ちなみにこれはNVMeのイラストです。',
         ansCorrect() { return this.correct }
     }
 ];
@@ -136,5 +136,15 @@ function onStart() {
     pageBtn.style.visibility = "hidden";
     writeQuestion();
 } 
+
+const input = document.querySelector('input');
+
+input.onkeypress = logKey;
+
+function logKey(e) {
+	if(event.keyCode == 13 ){
+		onAnswer()
+}
+}
 
 onStart();
