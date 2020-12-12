@@ -1,66 +1,86 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="utf-8">
-        <title>クイズ（ベータ版）</title>
-        <link href="https://fonts.googleapis.com/css?family=Londrina+Shadow" rel="stylesheet">
-        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-        <link rel="stylesheet" href="css/common.css">
-    </head>
-    <body>
-        <header>
-            <div class="header-wrapper">
-                <h1>ロゴ</h1>
-                <div class="nav-right">
-                    <p id="my-rank"></p>
-                    <p id="my-score"></p>
-                    <div class="menu">
-                        <button class="btn-menu" id="user-name">匿名さん</button>
-                        <nav>
-                            <ul class="item-list">
-                                <li><a href="">マイページ</a></li>
-                                <li><a href="">あなたへのおすすめ</a></li>
-                                <li><a href="">ログアウト</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <main>
-            <div class="quiz-list">
-                <div class="new">
-                    <h2>今週の新作！！</h2>
-                    <ul>
-                        <li><a href="html/page1.html">四択クイズ</a></li>
-                        <li><a href="html/page2.html">記述クイズ</a></li>
-                        <li><a href="">準備中</a></li>
-                        <li><a href="">準備中</a></li>
-                    </ul>
-                </div>
-                <div class="popularity">
-                    <h2>今月の人気作品</h2>
-                    <ul>
-                        <li><a href="html/page1.html">四択クイズ</a></li>
-                        <li><a href="html/page2.html">記述クイズ</a></li>
-                        <li><a href="">準備中</a></li>
-                        <li><a href="">準備中</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div id="create-btn">
-                <p>問題を作る</p>
-                <p>（荒らし防止の為ログインしていない人はIPアドレスを記録します）</p>
-            </div>
-<input type="button" onclick="location.href='html/questionnaire.html'" value="アンケートに答える">
-<input type="button" onclick="location.href='説明.txt'" value="説明">
-<input type="button" onclick="location.href='URL'" value="私のブログサイト">
-<input type="button" onclick="location.href='html/warning.html'" value="初期化">
-        </main>
-        <footer>
-            <p>このサイトについて</p>
-            <small>&copy;2020 スクランブルキャット</small>
-        </footer>
-        <script src="js/common.js"></script>
-    </body>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"
+  />
+  <head>
+    <meta charset="utf-8" />
+    <title>クイズ（ベータ版）</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Londrina+Shadow"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="css/common.css" />
+  </head>
+  <body>
+    <header>
+      <div id="console_log"></div>
+      <div class="header-wrapper">
+        <h1>クイズ</h1>
+        <div class="nav-right">
+          <p id="my-rank"></p>
+          <p id="my-score"></p>
+          <div class="menu">
+            <button class="btn-menu" id="user-name">匿名さん</button>
+            <nav>
+              <ul class="item-list">
+                <li><a href="">マイページ</a></li>
+                <li><a href="">あなたへのおすすめ</a></li>
+                <li><a href="">ログアウト</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="quiz-list">
+        <div class="new">
+          <h2>今週の新作！！</h2>
+          <ul>
+            <li><a href="html/page1.html">四択クイズ</a></li>
+            <li><a href="html/page2.html">記述クイズ</a></li>
+            <li><a href="">準備中</a></li>
+            <li><a href="">準備中</a></li>
+          </ul>
+        </div>
+        <div class="popularity">
+          <h2>今月の人気作品</h2>
+          <ul>
+            <li><a href="html/page1.html">四択クイズ</a></li>
+            <li><a href="html/page2.html">記述クイズ</a></li>
+            <li><a href="">準備中</a></li>
+            <li><a href="">準備中</a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="create-btn">
+        <p>問題を作る</p>
+        <p>（荒らし防止の為ログインしていない人はIPアドレスを記録します）</p>
+      </div>
+      <input
+        type="button"
+        onclick="location.href='html/questionnaire.html'"
+        value="アンケートに答える"
+      />
+      <input type="button" onclick="location.href='説明.txt'" value="説明" />
+      <input
+        type="button"
+        onclick="location.href='URL'"
+        value="私のブログサイト"
+      />
+      <input
+        type="button"
+        onclick="location.href='html/warning.html'"
+        value="初期化"
+      />
+    </main>
+    <footer>
+      <p>このサイトについて</p>
+      <small>&copy;2020 スクランブルキャット</small>
+    </footer>
+    <script src="js/common.js"></script>
+  </body>
 </html>

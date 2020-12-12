@@ -1,0 +1,5 @@
+@media screen and (max-width: 480px) {
+  p.img123 img {
+    width: 350px;
+  }
+}

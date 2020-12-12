@@ -1,40 +1,46 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="utf-8">
-        <title>クイズ（ベータ版）</title>
-        <link href="https://fonts.googleapis.com/css?family=Londrina+Shadow" rel="stylesheet">
-        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-        <link rel="stylesheet" href="../css/page2.css">
-    </head>
-    <body>
-        <section>
-            <div class="quiz">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"
+  />
+  <head>
+    <meta charset="utf-8" />
+    <title>クイズ（ベータ版）</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Londrina+Shadow"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="../css/page2.css" />
+  </head>
+  <body>
+    <section>
+      <div class="quiz">
+        <h2 id="title"></h2>
+        <div class="img-content">
+          <img id="img" src="../img/title.png" />
+        </div>
+        <p id="question"></p>
+        <div id="ans-area">
+          <input type="text" id="input-text" />
+          <button type="submit" id="ans-btn" onclick="onAnswer()">解答</button>
+        </div>
+      </div>
+    </section>
+    <section class="screen-transition" id="screen-transition">
+      <div>
+        <button id="home-btn" onclick="onTop()">ホームへ戻る</button>
+        <button id="next-btn" onclick="onPage2()">次の問題へ</button>
+      </div>
+    </section>
 
-                <h2 id="title"></h2>
-                <div class="img-content">
-                    <img id="img" src="../img/title.png">
-                </div>
-                <p id="question"></p>
-                <div id="ans-area">
-                    <input type="text" id="input-text">
-                    <button type="submit" id="ans-btn" onclick="onAnswer()">解答</button>
-                </div>
-            </div>
-        </section>
-        <section class="screen-transition" id="screen-transition">
-            <div>
-                <button id="home-btn" onclick="onTop()">ホームへ戻る</button>
-                <button id="next-btn" onclick="onPage2()">次の問題へ</button>
-            </div>
-        </section>
-        
-        <audio id="correct-sound" preload="auto">
-            <source src="../sounds/correct.mp3" type="audio/mp3">
-        </audio>
-        <audio id="incorrect-sound" preload="auto">
-            <source src="../sounds/incorrect.mp3" type="audio/mp3">
-        </audio>
-        <script src="../js/page2.js"></script>
-    </body>
+    <audio id="correct-sound" preload="auto">
+      <source src="../sounds/correct.mp3" type="audio/mp3" />
+    </audio>
+    <audio id="incorrect-sound" preload="auto">
+      <source src="../sounds/incorrect.mp3" type="audio/mp3" />
+    </audio>
+    <script src="../js/page2.js"></script>
+  </body>
 </html>
